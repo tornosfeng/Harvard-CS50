@@ -1,0 +1,23 @@
+while True:
+    n = get_int("Height:")
+    if n > 0 and n <=23:
+        break
+
+for i in range(n):
+    for j in range(n):
+        if j <= n - i:
+            print("  ", end = "")
+        else:
+            print("#", end = "")
+
+    print("   ", end = "")
+
+    for j in range(n):
+        if j <= i:
+            print("#", end = "")
+    print("\n")
+
+
+
+
+

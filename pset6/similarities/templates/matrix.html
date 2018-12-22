@@ -1,0 +1,55 @@
+<!-- TODO -->
+<table class="table table-sm">
+        <tr>
+            {% for i in (range(s2|length + 3)) %}
+                <th>
+                    {% if i < 3 %}
+                    {% else %}
+                        {{s2[i - 3]}}
+                    {% endif %}
+                </th>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for i in (range(s2|length + 3)) %}
+                <th>
+                    {% if i < 2 %}
+                    {% else %}
+                        {{i - 2}}
+                    {% endif %}
+                </th>
+            {% endfor %}
+        </tr>
+        {% for j in (range(s1|length + 1)) %}
+        <tr>
+            <th>
+                {% if j == 0 %}
+                {% else %}
+                    {{s1[j-1]}}
+                {% endif %}
+            </th>
+            <th>
+                {{j}}
+            </th>
+            {% for i in (range(s2|length + 1)) %}
+                <td>
+                    {{matrix[j][i][0]}}
+                </td>
+            {% endfor %}
+        </tr>
+
+        {% endfor %}
+
+
+
+
+
+    </thead>
+    <tbody>
+
+
+    </tbody>
+</table>
+
+
+
